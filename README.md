@@ -31,25 +31,25 @@ uint32_t  parsing (char * Gpsdata, char * latitude, char * longitude, int size)
 		uint32_t b;
 		uint32_t flag1;
 	uint32_t flag2;
-	uint32_t comma_counter;
+	uint32_t counter;
 	flag1=0;
 	flag2=0;
-	comma_counter=0;
+	counter=0;
     
     for(i = 0; i<size; i++) {
 			
         if(Gpsdata[i] == ',') {
-            comma_counter++;
-            if(comma_counter == 2) {
+            counter++;
+            if(counter == 2) {
                 lat_start = i+1;
             }
-            if(comma_counter == 3) {
+            if(counter == 3) {
                 lat_end = i-1;
             }
-            if(comma_counter == 4) {
+            if(counter == 4) {
                 lon_start = i+1;
             }
-            if(comma_counter == 5) {
+            if(counter == 5) {
                 lon_end = i-1;
 							
             }
