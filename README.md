@@ -1,4 +1,4 @@
-int data_line (char * data) {
+int dataa (char * data) {
 
     char d;
     int i;
